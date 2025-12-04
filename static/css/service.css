@@ -1,0 +1,485 @@
+/* Service Pages Shared Styles (CarAudit, Delivery, Warranty) */
+
+.service-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.service-hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* Service Content */
+.service-content {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.service-intro {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.service-intro h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.service-intro p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+/* Process Section */
+.process-section {
+    margin-bottom: 80px;
+}
+
+.process-section h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--dark-color);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.process-item {
+    background-color: var(--light-color);
+    padding: 40px 30px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.process-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.process-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.process-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.process-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.process-item li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.process-item li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+/* Options Section */
+.options-section {
+    margin-bottom: 80px;
+}
+
+.options-section h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--dark-color);
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.option-card {
+    background-color: white;
+    border: 2px solid #e9ecef;
+    padding: 40px 30px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.option-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.option-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.option-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.option-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.option-features {
+    list-style: none;
+    padding: 0;
+}
+
+.option-features li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.option-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+/* Included Section */
+.included-section {
+    margin-bottom: 80px;
+    background-color: var(--light-color);
+    padding: 60px 0;
+    border-radius: 8px;
+}
+
+.included-section h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--dark-color);
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.included-item {
+    text-align: center;
+}
+
+.included-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.included-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.included-item p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Warranty Types */
+.warranty-types {
+    margin-bottom: 80px;
+}
+
+.warranty-types h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--dark-color);
+}
+
+.warranty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.warranty-card {
+    background-color: white;
+    border: 2px solid #e9ecef;
+    padding: 40px 30px;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.warranty-card.extended {
+    border-color: var(--primary-color);
+}
+
+.warranty-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.warranty-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.warranty-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.warranty-period {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.warranty-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.warranty-features li {
+    padding: 12px 0;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Covered Section */
+.covered-section {
+    margin-bottom: 80px;
+}
+
+.covered-section h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--dark-color);
+}
+
+.covered-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.covered-item {
+    background-color: var(--light-color);
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.covered-item:hover {
+    transform: translateY(-5px);
+}
+
+.covered-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.covered-item h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.covered-item p {
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits-section {
+    margin-bottom: 80px;
+    background-color: var(--light-color);
+    padding: 60px 0;
+    border-radius: 8px;
+}
+
+.benefits-section h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--dark-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.benefit-card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.benefit-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.benefit-card p {
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Service CTA */
+.service-cta {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+}
+
+.service-cta h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.service-cta p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 18px 50px;
+    background-color: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Header Active State */
+.header .main-nav a.active,
+.dropdown-menu a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .service-intro h2,
+    .process-section h2,
+    .options-section h2,
+    .included-section h2,
+    .warranty-types h2,
+    .covered-section h2,
+    .benefits-section h2 {
+        font-size: 32px;
+    }
+
+    .process-grid,
+    .options-grid,
+    .included-grid,
+    .warranty-grid,
+    .covered-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

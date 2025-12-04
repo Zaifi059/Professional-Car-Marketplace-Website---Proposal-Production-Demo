@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carvago - Buy Used Cars Online | Inspected & Delivered</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/">carvago.</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/buy" class="active">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li class="dropdown">
+                            <a href="#">Services <span class="arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/caraudit">CarAudit™</a></li>
+                                <li><a href="/delivery">Delivery</a></li>
+                                <li><a href="/financing">Financing</a></li>
+                                <li><a href="/warranty">Warranty</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/electric-hybrid">Electric & Hybrid</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="icon-btn favorites-btn" title="Favorites">
+                        <svg class="heart-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#4B5563" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="icon-btn cart-btn" title="Cart">
+                        <svg class="cart-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.15.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" stroke="#4B5563" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-selector">
+                        <button class="lang-btn" id="langBtn">
+                            <svg class="flag-icon" width="20" height="20" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill-opacity=".7" d="M-85.3 0h682.6v512h-682.6z"/>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#a)" transform="translate(80) scale(.94)">
+                                    <g stroke-width="1pt">
+                                        <path fill="#006" d="M-256 0H768v512H-256z"/>
+                                        <path fill="#fff" d="m-256 0 512 512M768 0L-256 512" stroke="#fff" stroke-width="85.3"/>
+                                        <path fill="#fff" d="M-256 204.8H768M-256 307.2H768" stroke="#fff" stroke-width="85.3"/>
+                                        <path fill="#c00" d="m-256 0 512 512M768 0L-256 512" stroke="#c00" stroke-width="56.9"/>
+                                        <path fill="#c00" d="M-256 204.8H768M-256 307.2H768" stroke="#c00" stroke-width="56.9"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                        <div class="lang-menu" id="langMenu">
+                            <a href="#" class="lang-option" data-lang="cs">
+                                <svg class="lang-flag" width="20" height="20" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#11457e" d="M0 0l213.33 240L0 480z"/>
+                                    <path fill="#fff" d="M213.33 0h426.67v240H213.33z"/>
+                                    <path fill="#d7141a" d="M213.33 240h426.67v240H213.33z"/>
+                                </svg>
+                                <span>Čeština</span>
+                            </a>
+                            <a href="#" class="lang-option active" data-lang="en">
+                                <svg class="lang-flag" width="20" height="20" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <clipPath id="gb">
+                                            <path fill-opacity=".7" d="M-85.3 0h682.6v512h-682.6z"/>
+                                        </clipPath>
+                                    </defs>
+                                    <g clip-path="url(#gb)" transform="translate(80) scale(.94)">
+                                        <g stroke-width="1pt">
+                                            <path fill="#006" d="M-256 0H768v512H-256z"/>
+                                            <path fill="#fff" d="m-256 0 512 512M768 0L-256 512" stroke="#fff" stroke-width="85.3"/>
+                                            <path fill="#fff" d="M-256 204.8H768M-256 307.2H768" stroke="#fff" stroke-width="85.3"/>
+                                            <path fill="#c00" d="m-256 0 512 512M768 0L-256 512" stroke="#c00" stroke-width="56.9"/>
+                                            <path fill="#c00" d="M-256 204.8H768M-256 307.2H768" stroke="#c00" stroke-width="56.9"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <span>English (EN)</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="login-dropdown">
+                        <button class="btn-login" id="loginBtn">
+                            <svg class="user-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" stroke="#4B5563" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Login</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="login-menu" id="loginMenu">
+                            <a href="/saved-searches">Saved searches</a>
+                            <a href="/last-searches">Last searches</a>
+                            <a href="/favorites">Favorite cars</a>
+                            <a href="/orders">My Orders</a>
+                            <a href="/data-settings">Data & Privacy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Search -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 class="hero-title">You choose your car online.<br>We inspect it and deliver it.</h1>
+            
+            <div class="search-form">
+                <form action="/buy" method="GET">
+                    <div class="search-fields">
+                        <div class="search-row">
+                            <div class="search-field">
+                                <label>Make or model</label>
+                                <select name="make" class="search-select">
+                                    <option value="">All makes</option>
+                                    <option value="bmw">BMW</option>
+                                    <option value="mercedes">Mercedes-Benz</option>
+                                    <option value="audi">Audi</option>
+                                    <option value="volkswagen">Volkswagen</option>
+                                    <option value="skoda">Škoda</option>
+                                </select>
+                            </div>
+                            <div class="search-field">
+                                <label>Mileage</label>
+                                <select name="mileage" class="search-select">
+                                    <option value="">Any mileage</option>
+                                    <option value="10000">Up to 10,000 km</option>
+                                    <option value="50000">Up to 50,000 km</option>
+                                    <option value="100000">Up to 100,000 km</option>
+                                    <option value="150000">Up to 150,000 km</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-row">
+                            <div class="search-field">
+                                <label>Registration from</label>
+                                <select name="registration" class="search-select">
+                                    <option value="">Any year</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                </select>
+                            </div>
+                            <div class="search-field">
+                                <label>Price up to</label>
+                                <select name="price" class="search-select">
+                                    <option value="">Any price</option>
+                                    <option value="500000">Up to 500,000 CZK</option>
+                                    <option value="1000000">Up to 1,000,000 CZK</option>
+                                    <option value="1500000">Up to 1,500,000 CZK</option>
+                                    <option value="2000000">Up to 2,000,000 CZK</option>
+                                </select>
+                            </div>
+                            <div class="search-field vat-field">
+                                <label>
+                                    <input type="checkbox" name="vat">
+                                    <span>VAT deduction</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="search-row search-actions">
+                            <div class="search-info">
+                                <a href="/buy">Advanced search ></a>
+                            </div>
+                            <div class="search-submit">
+                                <button type="submit" class="btn-search-offers">1 044 559 Offers</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Previous Filters -->
+            <div class="previous-filters">
+                <span class="filters-label">Previous filters:</span>
+                <div class="filter-tags">
+                    <span class="filter-tag">BMW</span>
+                    <button class="filter-more">›</button>
+                </div>
+            </div>
+
+            <!-- Rating Section -->
+            <div class="hero-rating">
+                <span class="rating-score">4.8</span>
+                <span class="rating-stars">★★★★☆</span>
+                <a href="/reviews" class="rating-link">1894 reviews ></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L4 8v8c0 8 6 14 12 16 6-2 12-8 12-16V8L16 2z" fill="#0066CC"/>
+                            <path d="M16 6L8 10v6c0 6 4 10 8 12 4-2 8-6 8-12v-6l-8-4z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <h3>Money back guarantee</h3>
+                    <div class="feature-content">
+                        <p class="feature-summary"><strong>Can I really return the car?</strong></p>
+                        <div class="feature-details" style="display: none;">
+                            <p><strong>Of course, you can.</strong> We trust our service and know that <strong>we only sell inspected vehicles in excellent technical condition.</strong> Together with our customers we are fighting for better vehicles on roads.</p>
+                            <p><strong>Carvago, therefore, always assumes all risks connected with the vehicle.</strong> And if you simply don't like the car, <strong>you can return it to us up to 14 days after receiving it.</strong></p>
+                        </div>
+                    </div>
+                    <a href="#" class="learn-more" data-feature="1">More →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L4 8v8c0 8 6 14 12 16 6-2 12-8 12-16V8L16 2z" fill="#0066CC"/>
+                            <path d="M16 6L8 10v6c0 6 4 10 8 12 4-2 8-6 8-12v-6l-8-4z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <h3>Safe purchase</h3>
+                    <div class="feature-content">
+                        <p class="feature-summary"><strong>You don't risk anything buying</strong></p>
+                        <div class="feature-details" style="display: none;">
+                            <p><strong>Carvago is the safest way of buying a used car.</strong> Before each purchase we first of all carefully examine the chosen car and <strong>you then decide on the basis of its current condition</strong> and our recommendation.</p>
+                            <p>You always sign the contract with Carvago, so <strong>all guarantees are provided by us - you only need to buy the car, in your native language.</strong></p>
+                            <p>Wherever the car is from, you always make the payment to a local account in your local curency.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="learn-more" data-feature="2">More →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L4 8v8c0 8 6 14 12 16 6-2 12-8 12-16V8L16 2z" fill="#0066CC"/>
+                            <path d="M16 6L8 10v6c0 6 4 10 8 12 4-2 8-6 8-12v-6l-8-4z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <h3>6-month warranty</h3>
+                    <div class="feature-content">
+                        <p class="feature-summary"><strong>You receive an extended warranty on the car</strong></p>
+                        <div class="feature-details" style="display: none;">
+                            <p>For even greater peace of mind, aside from the warranty for hidden defects, you also have from us <strong>an extended 6-month warranty on the essentials</strong> \- the engine, gearbox and differential.</p>
+                            <p>If you want even more, you can choose a longer period of coverage for other parts of the vehicle in the order.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="learn-more" data-feature="3">More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="popular-categories">
+        <div class="container">
+            <h2>Popular at Carvago</h2>
+            <div class="categories-slider-wrapper">
+                <button class="slider-btn slider-btn-prev" aria-label="Previous categories">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18l-6-6 6-6" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="categories-slider" id="categoriesSlider">
+                    <div class="categories-track">
+                        <div class="category-card discount-card">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=300&h=200&fit=crop" alt="Discount" onerror="this.src='https://via.placeholder.com/300x200?text=Discount'">
+                            </div>
+                            <h3>Discount</h3>
+                            <p>Thousands of cars with a discount</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=300&h=200&fit=crop" alt="SUV Car" onerror="this.src='https://via.placeholder.com/300x200?text=SUV'">
+                            </div>
+                            <h3>SUV</h3>
+                            <p>typical car in category</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=300&h=200&fit=crop" alt="Family Car" onerror="this.src='https://via.placeholder.com/300x200?text=Family+Car'">
+                            </div>
+                            <h3>Family car</h3>
+                            <p>typical car in category</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&h=200&fit=crop" alt="Estate Car" onerror="this.src='https://via.placeholder.com/300x200?text=Estate'">
+                            </div>
+                            <h3>Estate</h3>
+                            <p>typical car in category</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=300&h=200&fit=crop" alt="City Car" onerror="this.src='https://via.placeholder.com/300x200?text=City'">
+                            </div>
+                            <h3>City</h3>
+                            <p>typical car in category</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300&h=200&fit=crop" alt="Luxury Car" onerror="this.src='https://via.placeholder.com/300x200?text=Luxury'">
+                            </div>
+                            <h3>Luxury</h3>
+                            <p>typical car in category</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=300&h=200&fit=crop" alt="Nearly New Car" onerror="this.src='https://via.placeholder.com/300x200?text=Nearly+New'">
+                            </div>
+                            <h3>Nearly new</h3>
+                            <p>typical car in category</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=300&h=200&fit=crop" alt="Sport Car" onerror="this.src='https://via.placeholder.com/300x200?text=Sport'">
+                            </div>
+                            <h3>Sport</h3>
+                            <p>typical car in category</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn slider-btn-next" aria-label="Next categories">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18l6-6-6-6" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How does it work?</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01.</div>
+                    <div class="step-image">🌍</div>
+                    <h3>Choose anywhere in Europe</h3>
+                    <p>No more compromises! With us, you have an unrivaled selection of cars in one place.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02.</div>
+                    <div class="step-image">🔍</div>
+                    <h3>We'll inspect the car closely</h3>
+                    <p>A certified mechanic will thoroughly inspect your car. You will decide according to the result after.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03.</div>
+                    <div class="step-image">🚚</div>
+                    <h3>We'll deliver it to your home</h3>
+                    <p>We arrange all the paperwork, registration and delivery. All you need to do is enjoy your new car.</p>
+                </div>
+            </div>
+            <div class="know-more">
+                <a href="/how-it-works" class="btn-secondary">Want to know more?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financing Calculator Section -->
+    <section class="financing-calculator-section">
+        <div class="container">
+            <div class="calculator-wrapper">
+                <!-- Left Column - Calculator -->
+                <div class="calculator-column">
+                    <div class="calculator-header">
+                        <span class="calculator-icon">🔢</span>
+                        <span class="calculator-header-text">Fair loans approved within 1 hour</span>
+                    </div>
+                    
+                    <!-- Price of the car -->
+                    <div class="calculator-field">
+                        <label for="carPrice">Price of the car</label>
+                        <div class="slider-container">
+                            <input type="range" id="carPrice" class="calculator-slider" 
+                                   min="50000" max="5000000" value="1109000" step="50000">
+                            <span class="slider-value" id="carPriceValue">Rs. 14 971 500</span>
+                        </div>
+                    </div>
+
+                    <!-- Payback period -->
+                    <div class="calculator-field">
+                        <label for="paybackPeriod">Payback period</label>
+                        <div class="slider-container">
+                            <input type="range" id="paybackPeriod" class="calculator-slider" 
+                                   min="6" max="120" value="48" step="6">
+                            <span class="slider-value" id="paybackPeriodValue">48 months</span>
+                        </div>
+                        <div class="period-options">
+                            <button class="period-option" data-months="6">6</button>
+                            <button class="period-option" data-months="12">12</button>
+                            <button class="period-option" data-months="24">24</button>
+                            <button class="period-option" data-months="36">36</button>
+                            <button class="period-option active" data-months="48">48</button>
+                            <button class="period-option" data-months="60">60</button>
+                            <button class="period-option" data-months="72">72</button>
+                            <button class="period-option" data-months="84">84</button>
+                            <button class="period-option" data-months="96">96</button>
+                            <button class="period-option" data-months="108">108</button>
+                            <button class="period-option" data-months="120">120</button>
+                        </div>
+                    </div>
+
+                    <!-- Down payment -->
+                    <div class="calculator-field">
+                        <label for="downPayment">
+                            Down payment (%)
+                            <span class="info-icon" title="Down payment is the initial payment you make when purchasing the car">ⓘ</span>
+                        </label>
+                        <div class="slider-container">
+                            <input type="range" id="downPayment" class="calculator-slider" 
+                                   min="0" max="90" value="30" step="10">
+                            <span class="slider-value" id="downPaymentValue">30% = Rs. 4 494 750</span>
+                        </div>
+                        <div class="payment-options">
+                            <button class="payment-option" data-percent="0">0%</button>
+                            <button class="payment-option" data-percent="10">10%</button>
+                            <button class="payment-option" data-percent="20">20%</button>
+                            <button class="payment-option active" data-percent="30">30%</button>
+                            <button class="payment-option" data-percent="40">40%</button>
+                            <button class="payment-option" data-percent="50">50%</button>
+                            <button class="payment-option" data-percent="60">60%</button>
+                            <button class="payment-option" data-percent="70">70%</button>
+                            <button class="payment-option" data-percent="80">80%</button>
+                            <button class="payment-option" data-percent="90">90%</button>
+                        </div>
+                    </div>
+
+                    <!-- Loan Summary -->
+                    <div class="loan-summary">
+                        <div class="summary-row">
+                            <span>Interest rate / APR</span>
+                            <span class="summary-value" id="interestRate">7.49% / 7.68%</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Loan Amount</span>
+                            <span class="summary-value" id="loanAmount">Rs. 10 476 750</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Total price</span>
+                            <span class="summary-value" id="totalPrice">Rs. 20 561 328</span>
+                        </div>
+                        <div class="summary-row monthly-payment">
+                            <span>Monthly instalment</span>
+                            <span class="summary-value-large" id="monthlyPayment">Rs. 218 265</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Information -->
+                <div class="financing-info-column">
+                    <h2>Financing of cars even from abroad</h2>
+                    <p>Carvago will even finance cars from abroad, which is rare. Furthermore, we are able to do so purely online and within 1 hour. Try out our financing calculator - there is no hidden fine print!</p>
+                    <a href="/financing" class="btn-financing-more">
+                        More about financing
+                        <span class="arrow-icon">→</span>
+                    </a>
+                    
+                    <!-- Testimonial -->
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Everything went smoothly - my financing got approved within minutes."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👤</div>
+                            <div class="author-info">
+                                <div class="author-name">Tereza P.</div>
+                                <div class="author-location">Ústí nad Labem</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Comprehensive services just a few clicks away</h2>
+            <p class="services-subtitle">One-stop solution for all your needs, from the comfort of your home.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Financing</h3>
+                    <ul>
+                        <li>Completely online within 1 hour</li>
+                        <li>Transparent, no fine print</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>CarAudit inspection</h3>
+                    <ul>
+                        <li>Thorough vehicle check</li>
+                        <li>Qualified mechanics and technicians</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Delivery</h3>
+                    <ul>
+                        <li>To your doorstep or a Pick-up Point</li>
+                        <li>Unbeatable price</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Warranty</h3>
+                    <ul>
+                        <li>Up to 36 months</li>
+                        <li>For all vehicles</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Insurance</h3>
+                    <ul>
+                        <li>Both third-party and comprehensive insurance</li>
+                        <li>Great rates for everyone</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Vehicle registration</h3>
+                    <ul>
+                        <li>Everything from emission-test to MOT</li>
+                        <li>Car registered in your name</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Your next car is waiting for you here...</h2>
+            <p class="offer-count-large">1 044 559 Offers</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>Call us</h4>
+                        <p>+420 246 034 700</p>
+                        <p>Mo–Su 8 am-8 pm</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>sales@instamotion.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk-Free Section -->
+    <section class="risk-free">
+        <div class="container">
+            <h3>You're not risking anything when you buy a vehicle on Carvago</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L4 8v8c0 8 6 14 12 16 6-2 12-8 12-16V8L16 2z" fill="#0066CC"/>
+                            <path d="M16 6L8 10v6c0 6 4 10 8 12 4-2 8-6 8-12v-6l-8-4z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <h4>Money back guarantee</h4>
+                    <div class="feature-content">
+                        <p class="feature-summary"><strong>Can I really return the car?</strong></p>
+                        <div class="feature-details" style="display: none;">
+                            <p><strong>Of course, you can.</strong> We trust our service and know that <strong>we only sell inspected vehicles in excellent technical condition.</strong> Together with our customers we are fighting for better vehicles on roads.</p>
+                            <p><strong>Carvago, therefore, always assumes all risks connected with the vehicle.</strong> And if you simply don't like the car, <strong>you can return it to us up to 14 days after receiving it.</strong></p>
+                        </div>
+                    </div>
+                    <a href="#" class="learn-more" data-feature="4">More →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L4 8v8c0 8 6 14 12 16 6-2 12-8 12-16V8L16 2z" fill="#0066CC"/>
+                            <path d="M16 6L8 10v6c0 6 4 10 8 12 4-2 8-6 8-12v-6l-8-4z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <h4>Safe purchase</h4>
+                    <div class="feature-content">
+                        <p class="feature-summary"><strong>You don't risk anything buying</strong></p>
+                        <div class="feature-details" style="display: none;">
+                            <p><strong>Carvago is the safest way of buying a used car.</strong> Before each purchase we first of all carefully examine the chosen car and <strong>you then decide on the basis of its current condition</strong> and our recommendation.</p>
+                            <p>You always sign the contract with Carvago, so <strong>all guarantees are provided by us - you only need to buy the car, in your native language.</strong></p>
+                            <p>Wherever the car is from, you always make the payment to a local account in your local curency.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="learn-more" data-feature="5">More →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L4 8v8c0 8 6 14 12 16 6-2 12-8 12-16V8L16 2z" fill="#0066CC"/>
+                            <path d="M16 6L8 10v6c0 6 4 10 8 12 4-2 8-6 8-12v-6l-8-4z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <h4>6-month warranty</h4>
+                    <div class="feature-content">
+                        <p class="feature-summary"><strong>You receive an extended warranty on the car</strong></p>
+                        <div class="feature-details" style="display: none;">
+                            <p>For even greater peace of mind, aside from the warranty for hidden defects, you also have from us <strong>an extended 6-month warranty on the essentials</strong> \- the engine, gearbox and differential.</p>
+                            <p>If you want even more, you can choose a longer period of coverage for other parts of the vehicle in the order.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="learn-more" data-feature="6">More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Carvago</h4>
+                    <ul>
+                        <li><a href="/buy">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li><a href="/electric-hybrid">Electric & Hybrid</a></li>
+                        <li><a href="/sitemap">Site map</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/caraudit">CarAudit™</a></li>
+                        <li><a href="/delivery">Delivery</a></li>
+                        <li><a href="/financing">Financing</a></li>
+                        <li><a href="/warranty">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/terms">Terms of Use</a></li>
+                        <li><a href="/whistleblowing">Whistleblowing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Carvago 2025 • All rights reserved</p>
+                <p class="digizone-branding">Developed by <strong>Digizone Solutions</strong> | <a href="/demo" style="color: #3B82F6; text-decoration: underline;">View Demo Showcase</a></p>
+                <div class="payment-methods">
+                    <span>We accept online card payments as well as wire transfers.</span>
+                    <div class="payment-icons">
+                        <div class="payment-card-visual visa-card" title="Visa"></div>
+                        <div class="payment-card-visual visa-electron-card" title="Visa Electron"></div>
+                        <div class="payment-card-visual mastercard-card" title="Mastercard"></div>
+                        <div class="payment-card-visual maestro-card" title="Maestro"></div>
+                        <div class="payment-card-visual diners-card" title="Diners Club"></div>
+                        <div class="payment-card-visual discover-card" title="Discover"></div>
+                    </div>
+                </div>
+                <div class="data-settings">
+                    <a href="/data-settings">Data Settings</a>
+                </div>
+                <div class="footer-legal">
+                    <p>This is a business communication of Carvago s.r.o. It is not a draft agreement or contract within the meaning of Section 1731 of Act No. 89/2012 Coll., the Civil Code.</p>
+                    <p>¹Representative example for Low Instalment financing: used vehicle, purchase price (incl. VAT) CZK 1,004,621, prepayment CZK 480,000, total loan amount CZK 524,621, loan term 48 monthly instalments, annual interest rate 7.69%, APR 7.96%, monthly loan instalment (1st - 47th) excl. insurance CZK 6,279, 48th instalment CZK 373,835, registration fee at the time of full repayment CZK 800, total amount due from the consumer CZK 669,748. If the loan amount equals or exceeds CZK 250,000, we require the arrangement of accident insurance. This type of financing can be used for cars up to 7 years old.</p>
+                    <p>²Representative example for a regular loan: used vehicle, purchase price (incl. VAT) CZK 1,004,621, prepayment CZK 480,000, total loan amount CZK 524,621, loan term 48 monthly instalments, annual interest rate 8.10%, APR 8.40%, monthly loan instalment excl. insurance CZK 12,830, registration fee at the time of full repayment CZK 800, total amount payable by the consumer CZK 616,640. If the loan amount equals or exceeds CZK 250,000, we require the arrangement of accident insurance.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+

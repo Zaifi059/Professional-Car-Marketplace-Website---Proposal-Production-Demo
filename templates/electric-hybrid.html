@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carvago - Electric & Hybrid Cars | Eco-Friendly Vehicles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/electric-hybrid.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/">carvago.</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/buy">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li class="dropdown">
+                            <a href="#">Services <span class="arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/caraudit">CarAudit™</a></li>
+                                <li><a href="/delivery">Delivery</a></li>
+                                <li><a href="/financing">Financing</a></li>
+                                <li><a href="/warranty">Warranty</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/electric-hybrid" class="active">Electric & Hybrid</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-login">Login</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="electric-hero">
+        <div class="container">
+            <h1>Electric & Hybrid Cars</h1>
+            <p class="hero-subtitle">Discover eco-friendly vehicles for a sustainable future</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="electric-content">
+        <div class="container">
+            <div class="electric-intro">
+                <h2>Drive Into the Future</h2>
+                <p>At Carvago, we offer a wide selection of electric and hybrid vehicles from leading manufacturers. Whether you're looking for a fully electric car or a hybrid model, we have options to suit every need and budget.</p>
+                <p>All our electric and hybrid vehicles undergo the same rigorous CarAudit™ inspection, ensuring you get the best quality and peace of mind with your eco-friendly purchase.</p>
+            </div>
+
+            <!-- Types Section -->
+            <div class="types-section">
+                <h2>Types of Eco-Friendly Vehicles</h2>
+                <div class="types-grid">
+                    <div class="type-card electric">
+                        <div class="type-icon">⚡</div>
+                        <h3>Fully Electric (EV)</h3>
+                        <p>100% electric vehicles powered by batteries. Zero emissions, low maintenance, and perfect for daily commuting.</p>
+                        <ul class="type-features">
+                            <li>Zero emissions</li>
+                            <li>Low running costs</li>
+                            <li>Quiet operation</li>
+                            <li>Government incentives available</li>
+                        </ul>
+                    </div>
+                    <div class="type-card hybrid">
+                        <div class="type-icon">🔋</div>
+                        <h3>Hybrid (HEV)</h3>
+                        <p>Combines a gasoline engine with an electric motor. Great fuel economy with the convenience of traditional fueling.</p>
+                        <ul class="type-features">
+                            <li>Improved fuel efficiency</li>
+                            <li>Lower emissions</li>
+                            <li>No charging needed</li>
+                            <li>Proven technology</li>
+                        </ul>
+                    </div>
+                    <div class="type-card plug-in">
+                        <div class="type-icon">🔌</div>
+                        <h3>Plug-in Hybrid (PHEV)</h3>
+                        <p>The best of both worlds - electric range for daily trips and gasoline engine for longer journeys.</p>
+                        <ul class="type-features">
+                            <li>Electric range for short trips</li>
+                            <li>Gasoline backup for long trips</li>
+                            <li>Flexible charging options</li>
+                            <li>Reduced emissions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="benefits-section">
+                <h2>Why Choose Electric or Hybrid?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌱</div>
+                        <h3>Environmental Impact</h3>
+                        <p>Reduce your carbon footprint and contribute to a cleaner environment.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💰</div>
+                        <h3>Cost Savings</h3>
+                        <p>Lower fuel costs and reduced maintenance expenses over time.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <h3>Performance</h3>
+                        <p>Instant torque and smooth acceleration for an enhanced driving experience.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🏛️</div>
+                        <h3>Government Incentives</h3>
+                        <p>Take advantage of tax credits and incentives for eco-friendly vehicles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Models -->
+            <div class="models-section">
+                <h2>Popular Electric & Hybrid Models</h2>
+                <div class="models-grid">
+                    <div class="model-card">
+                        <div class="model-image">🚗</div>
+                        <h3>Tesla Model 3</h3>
+                        <p>Fully Electric</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-image">🚙</div>
+                        <h3>Toyota Prius</h3>
+                        <p>Hybrid</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-image">🚘</div>
+                        <h3>Nissan Leaf</h3>
+                        <p>Fully Electric</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-image">🚕</div>
+                        <h3>BMW i3</h3>
+                        <p>Fully Electric</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-image">🚖</div>
+                        <h3>Volkswagen ID.3</h3>
+                        <p>Fully Electric</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-image">🚗</div>
+                        <h3>Hyundai Ioniq</h3>
+                        <p>Hybrid / Electric</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="electric-cta">
+                <h2>Ready to Go Electric?</h2>
+                <p>Browse our selection of electric and hybrid vehicles</p>
+                <a href="/buy" class="btn-primary">Browse Electric & Hybrid Cars</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Carvago</h4>
+                    <ul>
+                        <li><a href="/buy">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li><a href="/electric-hybrid">Electric & Hybrid</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/caraudit">CarAudit™</a></li>
+                        <li><a href="/delivery">Delivery</a></li>
+                        <li><a href="/financing">Financing</a></li>
+                        <li><a href="/warranty">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Carvago 2025 • All rights reserved</p>
+                <p class="digizone-branding">Developed by <strong>Digizone Solutions</strong> | <a href="/demo" style="color: #3B82F6; text-decoration: underline;">View Demo Showcase</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+

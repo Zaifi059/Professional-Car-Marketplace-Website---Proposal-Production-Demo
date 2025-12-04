@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carvago - How It Works | Buy Cars Online</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/how-it-works.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/">carvago.</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/buy">Buy</a></li>
+                        <li><a href="/how-it-works" class="active">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li class="dropdown">
+                            <a href="#">Services <span class="arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/caraudit">CarAudit™</a></li>
+                                <li><a href="/delivery">Delivery</a></li>
+                                <li><a href="/financing">Financing</a></li>
+                                <li><a href="/warranty">Warranty</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/electric-hybrid">Electric & Hybrid</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-login">Login</button>
+                    <div class="user-menu">
+                        <ul>
+                            <li><a href="/saved-searches">Saved searches</a></li>
+                            <li><a href="/last-searches">Last searches</a></li>
+                            <li><a href="/favorites">Favorite cars</a></li>
+                            <li><a href="/orders">My Orders</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>How It Works</h1>
+            <p class="hero-subtitle">Buying a car has never been easier. Follow these simple steps to get your perfect car delivered to your door.</p>
+        </div>
+    </section>
+
+    <!-- Main Steps -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="step-item">
+                    <div class="step-number-large">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">🌍</div>
+                        <h2>Choose anywhere in Europe</h2>
+                        <p>Browse through our extensive selection of verified cars from all across Europe. No more compromises - find exactly what you're looking for in one place. Use our advanced search filters to narrow down your options by make, model, price, mileage, and more.</p>
+                        <ul class="step-features">
+                            <li>Over 990,000 verified cars</li>
+                            <li>Advanced search and filters</li>
+                            <li>Compare multiple vehicles</li>
+                            <li>Save your favorite listings</li>
+                        </ul>
+                        <button class="btn-step-action" onclick="window.location.href='/buy'">Browse Cars</button>
+                    </div>
+                    <div class="step-image">
+                        <div class="image-placeholder">📱</div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-item reverse">
+                    <div class="step-number-large">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">🔍</div>
+                        <h2>We'll inspect the car closely</h2>
+                        <p>Once you've selected your car, our certified mechanics perform a thorough CarAudit™ inspection. You'll receive a detailed report about the vehicle's condition, and only then you decide whether to proceed with the purchase.</p>
+                        <ul class="step-features">
+                            <li>Certified mechanics inspection</li>
+                            <li>Detailed CarAudit™ report</li>
+                            <li>Photos and videos included</li>
+                            <li>Technical condition assessment</li>
+                            <li>You decide after reviewing the report</li>
+                        </ul>
+                        <button class="btn-step-action" onclick="window.location.href='/caraudit'">Learn About CarAudit™</button>
+                    </div>
+                    <div class="step-image">
+                        <div class="image-placeholder">🔧</div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-item">
+                    <div class="step-number-large">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">🚚</div>
+                        <h2>We'll deliver it to your home</h2>
+                        <p>We handle all the paperwork, registration, and logistics. Your car will be delivered directly to your doorstep or to a convenient pick-up point. All you need to do is sign, drive, and enjoy your new car!</p>
+                        <ul class="step-features">
+                            <li>Home delivery available</li>
+                            <li>Pick-up point options</li>
+                            <li>All paperwork handled</li>
+                            <li>Vehicle registration included</li>
+                            <li>Insurance assistance</li>
+                        </ul>
+                        <button class="btn-step-action" onclick="window.location.href='/delivery'">Delivery Options</button>
+                    </div>
+                    <div class="step-image">
+                        <div class="image-placeholder">🚗</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="features-section">
+        <div class="container">
+            <h2>Why Choose Carvago?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">💰</div>
+                    <h3>Money Back Guarantee</h3>
+                    <p>Not satisfied? Return your car within 14 days for a full refund. No questions asked.</p>
+                    <a href="/#guarantee" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Safe Purchase</h3>
+                    <p>All cars are inspected before purchase. You sign the contract with Carvago, ensuring full protection.</p>
+                    <a href="/#safety" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>6-Month Warranty</h3>
+                    <p>Extended warranty on engine, gearbox, and differential. Optional extended coverage available.</p>
+                    <a href="/warranty" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">💳</div>
+                    <h3>Easy Financing</h3>
+                    <p>Get approved for financing within 1 hour. Transparent terms, no hidden fees.</p>
+                    <a href="/financing" class="feature-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does the entire process take?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Typically, the entire process from selection to delivery takes 7-14 days. CarAudit inspection takes 2-3 business days, and delivery can be arranged within 5-7 business days after approval.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What if I don't like the car after delivery?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You have 14 days to return the car for a full refund if you're not satisfied. We trust our inspection process, so this guarantee applies to all purchases.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I finance my purchase?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer financing options with approval within 1 hour. You can use our financing calculator to estimate your monthly payments.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What documents do I need?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You'll need a valid ID, proof of address, and if financing, proof of income. We'll guide you through all required documentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Find Your Perfect Car?</h2>
+            <p>Start browsing our verified selection of cars from across Europe</p>
+            <a href="/buy" class="btn-primary">Browse Cars Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Carvago</h4>
+                    <ul>
+                        <li><a href="/buy">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li><a href="/electric-hybrid">Electric & Hybrid</a></li>
+                        <li><a href="/sitemap">Site map</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/caraudit">CarAudit™</a></li>
+                        <li><a href="/delivery">Delivery</a></li>
+                        <li><a href="/financing">Financing</a></li>
+                        <li><a href="/warranty">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/terms">Terms of Use</a></li>
+                        <li><a href="/whistleblowing">Whistleblowing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Carvago 2025 • All rights reserved</p>
+                <p class="digizone-branding">Developed by <strong>Digizone Solutions</strong> | <a href="/demo" style="color: #3B82F6; text-decoration: underline;">View Demo Showcase</a></p>
+                <div class="payment-methods">
+                    <span>We accept online card payments as well as wire transfers.</span>
+                    <div class="payment-icons">
+                        <div class="payment-card-visual visa-card" title="Visa"></div>
+                        <div class="payment-card-visual visa-electron-card" title="Visa Electron"></div>
+                        <div class="payment-card-visual mastercard-card" title="Mastercard"></div>
+                        <div class="payment-card-visual maestro-card" title="Maestro"></div>
+                        <div class="payment-card-visual diners-card" title="Diners Club"></div>
+                        <div class="payment-card-visual discover-card" title="Discover"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/how-it-works.js') }}"></script>
+</body>
+</html>
+

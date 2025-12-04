@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carvago - Warranty | Extended Car Warranty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/service.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/">carvago.</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/buy">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li class="dropdown">
+                            <a href="#">Services <span class="arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/caraudit">CarAudit™</a></li>
+                                <li><a href="/delivery">Delivery</a></li>
+                                <li><a href="/financing">Financing</a></li>
+                                <li><a href="/warranty" class="active">Warranty</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/electric-hybrid">Electric & Hybrid</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-login">Login</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Extended Warranty</h1>
+            <p class="hero-subtitle">Up to 36 months warranty - For all vehicles</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-intro">
+                <h2>Peace of Mind Warranty Coverage</h2>
+                <p>Every car purchased through Carvago comes with our comprehensive warranty coverage. Beyond the standard warranty for hidden defects, we offer extended warranty protection on essential components.</p>
+                <p>For even greater peace of mind, you can choose extended coverage for additional parts of the vehicle, ensuring you're protected for years to come.</p>
+            </div>
+
+            <!-- Warranty Types -->
+            <div class="warranty-types">
+                <h2>Warranty Options</h2>
+                <div class="warranty-grid">
+                    <div class="warranty-card standard">
+                        <div class="warranty-badge">Standard</div>
+                        <h3>6-Month Essential Warranty</h3>
+                        <p class="warranty-period">Included with every purchase</p>
+                        <ul class="warranty-features">
+                            <li>✓ Engine coverage</li>
+                            <li>✓ Gearbox coverage</li>
+                            <li>✓ Differential coverage</li>
+                            <li>✓ Hidden defects warranty</li>
+                        </ul>
+                    </div>
+                    <div class="warranty-card extended">
+                        <div class="warranty-badge">Extended</div>
+                        <h3>Up to 36 Months</h3>
+                        <p class="warranty-period">Available for additional coverage</p>
+                        <ul class="warranty-features">
+                            <li>✓ All essential components</li>
+                            <li>✓ Additional vehicle parts</li>
+                            <li>✓ Extended coverage period</li>
+                            <li>✓ Comprehensive protection</li>
+                            <li>✓ Transferable to new owner</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Covered Components -->
+            <div class="covered-section">
+                <h2>What's Covered</h2>
+                <div class="covered-grid">
+                    <div class="covered-item">
+                        <div class="covered-icon">🔧</div>
+                        <h3>Engine</h3>
+                        <p>Full coverage for engine components, block, head, and internal parts.</p>
+                    </div>
+                    <div class="covered-item">
+                        <div class="covered-icon">⚙️</div>
+                        <h3>Transmission</h3>
+                        <p>Complete gearbox coverage including automatic and manual systems.</p>
+                    </div>
+                    <div class="covered-item">
+                        <div class="covered-icon">🚗</div>
+                        <h3>Differential</h3>
+                        <p>Full differential and drivetrain component protection.</p>
+                    </div>
+                    <div class="covered-item">
+                        <div class="covered-icon">⚡</div>
+                        <h3>Electrical Systems</h3>
+                        <p>Extended coverage available for electrical components and systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="benefits-section">
+                <h2>Warranty Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🛡️</div>
+                        <h3>Comprehensive Coverage</h3>
+                        <p>Protection for essential vehicle components that matter most.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💰</div>
+                        <h3>Cost Protection</h3>
+                        <p>Save on expensive repairs with our warranty coverage.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✅</div>
+                        <h3>Easy Claims</h3>
+                        <p>Simple and straightforward warranty claim process.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🔧</div>
+                        <h3>Authorized Service</h3>
+                        <p>Service at authorized repair centers across Europe.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="service-cta">
+                <h2>Ready to Buy with Confidence?</h2>
+                <p>All cars come with warranty protection included</p>
+                <a href="/buy" class="btn-primary">Browse Cars</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Carvago</h4>
+                    <ul>
+                        <li><a href="/buy">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/caraudit">CarAudit™</a></li>
+                        <li><a href="/delivery">Delivery</a></li>
+                        <li><a href="/financing">Financing</a></li>
+                        <li><a href="/warranty">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Carvago 2025 • All rights reserved</p>
+                <p class="digizone-branding">Developed by <strong>Digizone Solutions</strong> | <a href="/demo" style="color: #3B82F6; text-decoration: underline;">View Demo Showcase</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+

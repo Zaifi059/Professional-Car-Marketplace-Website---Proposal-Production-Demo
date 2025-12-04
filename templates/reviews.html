@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carvago - Customer Reviews | Verified Reviews</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reviews.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/">carvago.</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/buy">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews" class="active">Reviews</a></li>
+                        <li class="dropdown">
+                            <a href="#">Services <span class="arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/caraudit">CarAudit™</a></li>
+                                <li><a href="/delivery">Delivery</a></li>
+                                <li><a href="/financing">Financing</a></li>
+                                <li><a href="/warranty">Warranty</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/electric-hybrid">Electric & Hybrid</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-login">Login</button>
+                    <div class="user-menu">
+                        <ul>
+                            <li><a href="/saved-searches">Saved searches</a></li>
+                            <li><a href="/last-searches">Last searches</a></li>
+                            <li><a href="/favorites">Favorite cars</a></li>
+                            <li><a href="/orders">My Orders</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Reviews Hero Section -->
+    <section class="reviews-hero">
+        <div class="container">
+            <h1>What Our Customers Say</h1>
+            <p class="reviews-subtitle">Read verified reviews from customers who bought their cars through Carvago</p>
+            <div class="rating-summary">
+                <div class="average-rating">
+                    <span class="rating-number">4.8</span>
+                    <div class="stars">
+                        <span class="star filled">★★★★★</span>
+                    </div>
+                    <p class="rating-text">Based on 12,847 reviews</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Content -->
+    <section class="reviews-content">
+        <div class="container">
+            <!-- Filter and Sort -->
+            <div class="reviews-controls">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Reviews</button>
+                    <button class="filter-btn" data-filter="5">5 Stars</button>
+                    <button class="filter-btn" data-filter="4">4 Stars</button>
+                    <button class="filter-btn" data-filter="3">3 Stars</button>
+                    <button class="filter-btn" data-filter="2">2 Stars</button>
+                    <button class="filter-btn" data-filter="1">1 Star</button>
+                </div>
+                <div class="sort-controls">
+                    <label>Sort by:</label>
+                    <select class="sort-select" id="sortReviews">
+                        <option value="newest">Newest first</option>
+                        <option value="oldest">Oldest first</option>
+                        <option value="highest">Highest rated</option>
+                        <option value="lowest">Lowest rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Review Card 1 -->
+                <div class="review-card" data-rating="5">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JD</div>
+                            <div>
+                                <h3 class="reviewer-name">Jan Dvořák</h3>
+                                <p class="review-date">December 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star-rating">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Excellent service! The car inspection was thorough and the delivery was on time. Everything was exactly as described. Highly recommend Carvago!"</p>
+                    </div>
+                    <div class="review-meta">
+                        <span class="car-info">Audi A4 2019</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="review-card" data-rating="5">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MK</div>
+                            <div>
+                                <h3 class="reviewer-name">Martin Kovář</h3>
+                                <p class="review-date">November 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star-rating">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Smooth process from start to finish. The financing was approved quickly and the CarAudit inspection gave me confidence in my purchase. Great experience!"</p>
+                    </div>
+                    <div class="review-meta">
+                        <span class="car-info">BMW 3 Series 2020</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="review-card" data-rating="5">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">PS</div>
+                            <div>
+                                <h3 class="reviewer-name">Petra Svobodová</h3>
+                                <p class="review-date">November 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star-rating">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"I was skeptical about buying a car online, but Carvago made it easy. The inspection report was detailed and the car arrived in perfect condition. Very satisfied!"</p>
+                    </div>
+                    <div class="review-meta">
+                        <span class="car-info">Volkswagen Golf 2021</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 4 -->
+                <div class="review-card" data-rating="4">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">TL</div>
+                            <div>
+                                <h3 class="reviewer-name">Tomáš Novák</h3>
+                                <p class="review-date">October 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star-rating">★★★★☆</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Good service overall. The delivery took a bit longer than expected, but the car quality was excellent. Would use Carvago again."</p>
+                    </div>
+                    <div class="review-meta">
+                        <span class="car-info">Škoda Octavia 2018</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 5 -->
+                <div class="review-card" data-rating="5">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AH</div>
+                            <div>
+                                <h3 class="reviewer-name">Anna Horáková</h3>
+                                <p class="review-date">October 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star-rating">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"The best car buying experience I've had! Everything was transparent, professional, and the 14-day return guarantee gave me peace of mind. Highly recommended!"</p>
+                    </div>
+                    <div class="review-meta">
+                        <span class="car-info">Mercedes-Benz C-Class 2019</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 6 -->
+                <div class="review-card" data-rating="5">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">VK</div>
+                            <div>
+                                <h3 class="reviewer-name">Václav Krejčí</h3>
+                                <p class="review-date">September 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="star-rating">★★★★★</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Fast financing approval, excellent customer service, and the car exceeded my expectations. The warranty coverage is a big plus. Very happy with my purchase!"</p>
+                    </div>
+                    <div class="review-meta">
+                        <span class="car-info">Ford Focus 2020</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn-load-more" id="loadMoreBtn">Load More Reviews</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Write Review Section -->
+    <section class="write-review-section">
+        <div class="container">
+            <h2>Share Your Experience</h2>
+            <p>Bought a car through Carvago? We'd love to hear about your experience!</p>
+            <button class="btn-write-review" id="writeReviewBtn">Write a Review</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Carvago</h4>
+                    <ul>
+                        <li><a href="/buy">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li><a href="/electric-hybrid">Electric & Hybrid</a></li>
+                        <li><a href="/sitemap">Site map</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/caraudit">CarAudit™</a></li>
+                        <li><a href="/delivery">Delivery</a></li>
+                        <li><a href="/financing">Financing</a></li>
+                        <li><a href="/warranty">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/terms">Terms of Use</a></li>
+                        <li><a href="/whistleblowing">Whistleblowing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Carvago 2025 • All rights reserved</p>
+                <p class="digizone-branding">Developed by <strong>Digizone Solutions</strong> | <a href="/demo" style="color: #3B82F6; text-decoration: underline;">View Demo Showcase</a></p>
+                <div class="payment-methods">
+                    <span>We accept online card payments as well as wire transfers.</span>
+                    <div class="payment-icons">
+                        <div class="payment-card-visual visa-card" title="Visa"></div>
+                        <div class="payment-card-visual visa-electron-card" title="Visa Electron"></div>
+                        <div class="payment-card-visual mastercard-card" title="Mastercard"></div>
+                        <div class="payment-card-visual maestro-card" title="Maestro"></div>
+                        <div class="payment-card-visual diners-card" title="Diners Club"></div>
+                        <div class="payment-card-visual discover-card" title="Discover"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/reviews.js') }}"></script>
+</body>
+</html>
+
+

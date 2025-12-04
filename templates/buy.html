@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carvago - Buy Cars | Verified Cars Online</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buy.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/">carvago.</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/buy" class="active">Buy</a></li>
+                        <li><a href="/how-it-works">How it works</a></li>
+                        <li><a href="/reviews">Reviews</a></li>
+                        <li class="dropdown">
+                            <a href="#">Services <span class="arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/caraudit">CarAudit™</a></li>
+                                <li><a href="/delivery">Delivery</a></li>
+                                <li><a href="/financing">Financing</a></li>
+                                <li><a href="/warranty">Warranty</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/electric-hybrid">Electric & Hybrid</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="icon-btn favorites-btn" title="Favorites">
+                        <svg class="heart-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#4B5563" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="icon-btn cart-btn" title="Cart">
+                        <svg class="cart-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.15.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" stroke="#4B5563" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-selector">
+                        <button class="lang-btn" id="langBtn">
+                            <svg class="flag-icon" width="20" height="20" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill-opacity=".7" d="M-85.3 0h682.6v512h-682.6z"/>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#a)" transform="translate(80) scale(.94)">
+                                    <g stroke-width="1pt">
+                                        <path fill="#006" d="M-256 0H768v512H-256z"/>
+                                        <path fill="#fff" d="m-256 0 512 512M768 0L-256 512" stroke="#fff" stroke-width="85.3"/>
+                                        <path fill="#fff" d="M-256 204.8H768M-256 307.2H768" stroke="#fff" stroke-width="85.3"/>
+                                        <path fill="#c00" d="m-256 0 512 512M768 0L-256 512" stroke="#c00" stroke-width="56.9"/>
+                                        <path fill="#c00" d="M-256 204.8H768M-256 307.2H768" stroke="#c00" stroke-width="56.9"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                        <div class="lang-menu" id="langMenu">
+                            <a href="#" class="lang-option" data-lang="cs">
+                                <svg class="lang-flag" width="20" height="20" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#11457e" d="M0 0l213.33 240L0 480z"/>
+                                    <path fill="#fff" d="M213.33 0h426.67v240H213.33z"/>
+                                    <path fill="#d7141a" d="M213.33 240h426.67v240H213.33z"/>
+                                </svg>
+                                <span>Čeština</span>
+                            </a>
+                            <a href="#" class="lang-option active" data-lang="en">
+                                <svg class="lang-flag" width="20" height="20" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <clipPath id="gb">
+                                            <path fill-opacity=".7" d="M-85.3 0h682.6v512h-682.6z"/>
+                                        </clipPath>
+                                    </defs>
+                                    <g clip-path="url(#gb)" transform="translate(80) scale(.94)">
+                                        <g stroke-width="1pt">
+                                            <path fill="#006" d="M-256 0H768v512H-256z"/>
+                                            <path fill="#fff" d="m-256 0 512 512M768 0L-256 512" stroke="#fff" stroke-width="85.3"/>
+                                            <path fill="#fff" d="M-256 204.8H768M-256 307.2H768" stroke="#fff" stroke-width="85.3"/>
+                                            <path fill="#c00" d="m-256 0 512 512M768 0L-256 512" stroke="#c00" stroke-width="56.9"/>
+                                            <path fill="#c00" d="M-256 204.8H768M-256 307.2H768" stroke="#c00" stroke-width="56.9"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <span>English</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="login-dropdown">
+                        <button class="btn-login" id="loginBtn">
+                            <svg class="user-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" stroke="#4B5563" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Login</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="login-menu">
+                            <a href="/saved-searches">Saved searches</a>
+                            <a href="/last-searches">Last searches</a>
+                            <a href="/favorites">Favorite cars</a>
+                            <a href="/orders">My Orders</a>
+                            <a href="/data-settings">Data & Privacy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="buy-page-container">
+        <!-- Left Sidebar - Filters -->
+        <aside class="filters-sidebar">
+            <div class="filters-header">
+                <h2>Filter</h2>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-tab="all">All</button>
+                <button class="filter-tab" data-tab="saved">Saved</button>
+                <button class="filter-tab" data-tab="history">History</button>
+            </div>
+
+            <div class="filters-content">
+                <!-- Make and Model -->
+                <div class="filter-section">
+                    <h3>Make and Model</h3>
+                    <button class="btn-add-car" id="addCarBtn">Add a car</button>
+                    <div class="car-dropdown" id="carDropdown" style="display: none;">
+                        <input type="text" placeholder="Search make/model..." id="carSearchInput">
+                        <div class="car-list" id="carList">
+                            <!-- Car list will be populated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="filter-section">
+                    <h3>Price (PKR)</h3>
+                    <div class="price-inputs">
+                        <input type="number" placeholder="From" id="priceFrom" class="filter-input">
+                        <input type="number" placeholder="To" id="priceTo" class="filter-input">
+                    </div>
+                    <div class="price-buttons">
+                        <button class="btn-toggle active" data-type="installments">Installments</button>
+                        <button class="btn-toggle" data-type="cash">Cash</button>
+                    </div>
+                    <div class="filter-checkboxes">
+                        <label><input type="checkbox" id="vatDeduction"> VAT deduction</label>
+                        <label><input type="checkbox" id="discountedCars"> Discounted cars</label>
+                        <label><input type="checkbox" id="premiumPartners"> Premium partners</label>
+                    </div>
+                </div>
+
+                <!-- Registration -->
+                <div class="filter-section">
+                    <h3>Registration</h3>
+                    <div class="filter-dropdowns">
+                        <select id="registrationFrom" class="filter-select">
+                            <option value="">From</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                        </select>
+                        <select id="registrationTo" class="filter-select">
+                            <option value="">To</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Mileage -->
+                <div class="filter-section">
+                    <h3>Mileage</h3>
+                    <div class="filter-dropdowns">
+                        <select id="mileageFrom" class="filter-select">
+                            <option value="">From</option>
+                            <option value="0">0 km</option>
+                            <option value="10000">10,000 km</option>
+                            <option value="25000">25,000 km</option>
+                            <option value="50000">50,000 km</option>
+                            <option value="75000">75,000 km</option>
+                            <option value="100000">100,000 km</option>
+                            <option value="150000">150,000 km</option>
+                            <option value="200000">200,000 km</option>
+                        </select>
+                        <select id="mileageTo" class="filter-select">
+                            <option value="">To</option>
+                            <option value="10000">10,000 km</option>
+                            <option value="25000">25,000 km</option>
+                            <option value="50000">50,000 km</option>
+                            <option value="75000">75,000 km</option>
+                            <option value="100000">100,000 km</option>
+                            <option value="150000">150,000 km</option>
+                            <option value="200000">200,000 km</option>
+                            <option value="999999">200,000+ km</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Transmission -->
+                <div class="filter-section">
+                    <h3>Transmission</h3>
+                    <div class="transmission-buttons">
+                        <button class="btn-toggle" data-type="automatic">Automatic</button>
+                        <button class="btn-toggle" data-type="manual">Manual</button>
+                    </div>
+                </div>
+
+                <!-- Fuel -->
+                <div class="filter-section">
+                    <h3>Fuel</h3>
+                    <div class="fuel-dropdowns">
+                        <select id="fuelType1" class="filter-select">
+                            <option value="">Select fuel type</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="petrol">Petrol</option>
+                            <option value="electric">Electric</option>
+                            <option value="hybrid">Hybrid</option>
+                            <option value="lpg">LPG</option>
+                        </select>
+                        <select id="fuelType2" class="filter-select">
+                            <option value="">Select fuel type</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="petrol">Petrol</option>
+                            <option value="electric">Electric</option>
+                            <option value="hybrid">Hybrid</option>
+                            <option value="lpg">LPG</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Power -->
+                <div class="filter-section">
+                    <h3>Power</h3>
+                    <div class="power-inputs">
+                        <select id="powerFrom" class="filter-select">
+                            <option value="">From</option>
+                            <option value="50">50 kW</option>
+                            <option value="75">75 kW</option>
+                            <option value="100">100 kW</option>
+                            <option value="150">150 kW</option>
+                            <option value="200">200 kW</option>
+                            <option value="250">250 kW</option>
+                            <option value="300">300 kW</option>
+                        </select>
+                        <select id="powerTo" class="filter-select">
+                            <option value="">To</option>
+                            <option value="100">100 kW</option>
+                            <option value="150">150 kW</option>
+                            <option value="200">200 kW</option>
+                            <option value="250">250 kW</option>
+                            <option value="300">300 kW</option>
+                            <option value="400">400 kW</option>
+                            <option value="500">500+ kW</option>
+                        </select>
+                        <button class="btn-unit active" data-unit="kW">kW</button>
+                    </div>
+                </div>
+
+                <!-- Vehicle Type -->
+                <div class="filter-section">
+                    <h3>Vehicle Type</h3>
+                    <select id="vehicleType" class="filter-select">
+                        <option value="">All</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="hatchback">Hatchback</option>
+                        <option value="estate">Estate</option>
+                        <option value="coupe">Coupe</option>
+                        <option value="convertible">Convertible</option>
+                    </select>
+                    <div class="filter-checkboxes">
+                        <label><input type="checkbox" id="drive4x4"> Drive type 4x4</label>
+                    </div>
+                </div>
+
+                <!-- Exterior Color -->
+                <div class="filter-section">
+                    <h3>Exterior Color</h3>
+                    <div class="color-swatches">
+                        <button class="color-swatch" data-color="black" style="background-color: #000000;" title="Black"></button>
+                        <button class="color-swatch" data-color="white" style="background-color: #ffffff; border: 1px solid #ddd;" title="White"></button>
+                        <button class="color-swatch" data-color="orange" style="background-color: #ff8c00;" title="Orange"></button>
+                        <button class="color-swatch" data-color="red" style="background-color: #dc3545;" title="Red"></button>
+                        <button class="color-swatch" data-color="blue" style="background-color: #007bff;" title="Blue"></button>
+                        <button class="color-swatch" data-color="purple" style="background-color: #6f42c1;" title="Purple"></button>
+                        <button class="color-swatch" data-color="green" style="background-color: #28a745;" title="Green"></button>
+                        <button class="color-swatch" data-color="lightblue" style="background-color: #17a2b8;" title="Light Blue"></button>
+                        <button class="color-swatch" data-color="grey" style="background-color: #6c757d;" title="Grey"></button>
+                        <button class="color-swatch" data-color="yellow" style="background-color: #ffc107;" title="Yellow"></button>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="filter-section">
+                    <h3>Features</h3>
+                    <div class="features-list">
+                        <label><input type="checkbox" class="feature-checkbox" value="trailer"> Trailer coupling</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="heated-seats"> Heated front seats</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="navigation"> Navigation system</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="heated-wheel"> Heated steering wheel</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="heated-windshield"> Heated windshield</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="auxiliary-heating"> Auxiliary heating</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="ventilated-seats"> Ventilated front seats</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="panoramic-roof"> Panoramic roof</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="blind-spot"> Blind spot assist</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="carplay"> Apple CarPlay</label>
+                        <label><input type="checkbox" class="feature-checkbox" value="android-auto"> Android Auto</label>
+                    </div>
+                    <button class="btn-more-features" id="moreFeaturesBtn">More features</button>
+                </div>
+
+                <!-- Detailed Search Button -->
+                <button class="btn-detailed-search" id="detailedSearchBtn">Detailed search</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="cars-main-content">
+            <!-- Banner -->
+            <div class="info-banner">
+                <div class="banner-content">
+                    <span class="banner-icon">👤</span>
+                    <span class="banner-text">How to buy a car online</span>
+                </div>
+                <button class="btn-banner" id="findOutMoreBtn">Find out more</button>
+            </div>
+
+            <!-- Results Header -->
+            <div class="results-header">
+                <div class="results-title-section">
+                    <h1 class="results-title">Verified cars</h1>
+                    <span class="results-count" id="resultsCount">88,110 results</span>
+                </div>
+                <div class="results-controls">
+                    <select class="sort-dropdown" id="sortDropdown">
+                        <option value="newest">Newest first</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="mileage-low">Mileage: Low to High</option>
+                        <option value="mileage-high">Mileage: High to Low</option>
+                        <option value="year-new">Year: Newest</option>
+                        <option value="year-old">Year: Oldest</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Pagination Top -->
+            <div class="pagination-top">
+                <button class="pagination-btn prev" id="prevPageBtn" disabled>‹</button>
+                <div class="pagination-numbers" id="paginationNumbers">
+                    <button class="page-number active" data-page="1">1</button>
+                    <button class="page-number" data-page="2">2</button>
+                    <button class="page-number" data-page="3">3</button>
+                    <button class="page-number" data-page="4">4</button>
+                    <span class="pagination-dots">...</span>
+                    <button class="page-number" data-page="44508">44508</button>
+                </div>
+                <button class="pagination-btn next" id="nextPageBtn">›</button>
+            </div>
+
+            <!-- Car Listings -->
+            <div class="car-listings" id="carListings">
+                <!-- Skeleton loaders -->
+                <div class="car-listing-skeleton">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-line long"></div>
+                        <div class="skeleton-line medium"></div>
+                        <div class="skeleton-line short"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+                <div class="car-listing-skeleton">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-line long"></div>
+                        <div class="skeleton-line medium"></div>
+                        <div class="skeleton-line short"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+                <div class="car-listing-skeleton">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-line long"></div>
+                        <div class="skeleton-line medium"></div>
+                        <div class="skeleton-line short"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+                <div class="car-listing-skeleton">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-line long"></div>
+                        <div class="skeleton-line medium"></div>
+                        <div class="skeleton-line short"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+                <div class="car-listing-skeleton">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-line long"></div>
+                        <div class="skeleton-line medium"></div>
+                        <div class="skeleton-line short"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+                <div class="car-listing-skeleton">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-line long"></div>
+                        <div class="skeleton-line medium"></div>
+                        <div class="skeleton-line short"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+                <div class="car-listing-skeleton">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-line long"></div>
+                        <div class="skeleton-line medium"></div>
+                        <div class="skeleton-line short"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+                <div class="car-listing-skeleton">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-line long"></div>
+                        <div class="skeleton-line medium"></div>
+                        <div class="skeleton-line short"></div>
+                        <div class="skeleton-line medium"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination Bottom -->
+            <div class="pagination-bottom">
+                <button class="pagination-btn prev" id="prevPageBtnBottom" disabled>‹</button>
+                <div class="pagination-numbers" id="paginationNumbersBottom">
+                    <button class="page-number active" data-page="1">1</button>
+                    <button class="page-number" data-page="2">2</button>
+                    <button class="page-number" data-page="3">3</button>
+                    <button class="page-number" data-page="4">4</button>
+                    <span class="pagination-dots">...</span>
+                    <button class="page-number" data-page="44508">44508</button>
+                </div>
+                <button class="pagination-btn next" id="nextPageBtnBottom">›</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/buy.js') }}"></script>
+</body>
+</html>
+
