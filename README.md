@@ -4,13 +4,15 @@
 
 **A modern, responsive car marketplace website built with Flask**
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-3.0.0-green.svg)](https://flask.palletsprojects.com/)
-[![License](https://img.shields.io/badge/License-Educational-yellow.svg)](LICENSE)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2295b70d-8794-42de-af86-105ab89c190f" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/54a24ae6-1bb8-40b5-b98c-65020f050d15" />
+
+
 
 **Developed by [Digizone Solutions](https://digizonesolutions.online)**
 
-[Demo Showcase]
+
 
 </div>
 
@@ -246,7 +248,7 @@ This is a demonstration project developed by **Digizone Solutions**.
 
 For questions, suggestions, or collaboration opportunities, please contact:
 - **Developer**: Digizone Solutions
-- **Website**: [digizonesolutions.com](https://digizonesolutions.com)
+- **Website**: [digizonesolutions.com](https://digizonesolutions.online)
 
 ## 📄 License
 
@@ -256,7 +258,7 @@ This project is for **educational and demonstration purposes** only.
 
 ## 👨‍💻 Development
 
-**Developed by [Digizone Solutions](https://digizonesolutions.com)**
+**Developed by [Digizone Solutions](https://digizonesolutions.online)**
 
 This project demonstrates professional web development capabilities including:
 - ✅ Modern Flask backend architecture
@@ -275,9 +277,10 @@ This project demonstrates professional web development capabilities including:
 
 <div align="center">
 
-**Made with ❤️ by [Digizone Solutions](https://digizonesolutions.com)**
+**Made with ❤️ by [Digizone Solutions](https://digizonesolutions.online)**
 
 ⭐ Star this repo if you find it helpful!
 
 </div>
+
 
