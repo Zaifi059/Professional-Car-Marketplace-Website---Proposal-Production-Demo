@@ -132,11 +132,11 @@ car-website/
    ```
 
 2. **Access the website**
-   - Open your browser and navigate to: `http://localhost:5000`
-   - The server runs on port `5000` by default
+   - Open your browser and navigate to: `https://demoshowcasev1.netlify.app/demo`
+ 
 
 3. **View Demo Showcase**
-   - Navigate to: `http://localhost:5000/demo`
+   - Navigate to: `https://demoshowcasev1.netlify.app/demo`
    - This page showcases the project proposal and demonstration
 
 ### Available Routes
@@ -240,7 +240,7 @@ This project includes a comprehensive **Demo Showcase** page (`/demo`) that serv
 - ✅ Available pages and functionality
 - ✅ Potential enhancements
 
-**Visit**: `http://localhost:5000/demo` to view the full showcase.
+**Visit**: `https://demoshowcasev1.netlify.app/demo` to view the full showcase.
 
 ## 🤝 Contributing
 
@@ -282,5 +282,6 @@ This project demonstrates professional web development capabilities including:
 ⭐ Star this repo if you find it helpful!
 
 </div>
+
 
 
